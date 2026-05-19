@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background 3D Floating Icons -->
+    <div class="background-icons">
+        <i class="fas fa-coins bg-icon" style="top: 15%; left: 10%; animation-duration: 12s; font-size: 80px;"></i>
+        <i class="fab fa-bitcoin bg-icon" style="top: 65%; left: 85%; animation-duration: 15s; font-size: 100px;"></i>
+        <i class="fas fa-dollar-sign bg-icon" style="top: 35%; left: 75%; animation-duration: 10s; font-size: 120px;"></i>
+        <i class="fas fa-euro-sign bg-icon" style="top: 75%; left: 20%; animation-duration: 14s; font-size: 90px;"></i>
+        <i class="fas fa-yen-sign bg-icon" style="top: 20%; left: 60%; animation-duration: 11s; font-size: 70px;"></i>
+        <i class="fas fa-pound-sign bg-icon" style="top: 85%; left: 55%; animation-duration: 16s; font-size: 85px;"></i>
+    </div>
+
+    <div id="auth-page" class="auth-section landing-page">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    
+        <nav class="top-nav">
+            <div class="logo-name">FinConvert</div>
+        </nav>
+    
+        <main class="landing-main">
+            <div class="left-content">
+                <h1>Prosper.</h1>
+                <h2>Master Your Financial Journey</h2>
+                <p>"Money is a terrible master but an excellent servant." — P.T. Barnum. Take control of your global exchanges with real-time accuracy and seamless conversions.</p>
+                <button id="learn-more-btn" class="learn-more-btn">Learn More</button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+    
+            <div class="right-content">
+                <div class="login-card">
+                    <form id="login-form">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="email" id="login-email" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="login-password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="auth-submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <nav class="sidebar">
+            <div class="logo"><i class="fas fa-coins"></i> FinConvert</div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#calculator"><i class="fas fa-calculator"></i> Calculator</a></li>
+                <li><a href="#work"><i class="fas fa-history"></i> History</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li style="margin-top: 20px;"><a href="#" id="login-nav-btn" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+            <section id="home" class="section active">
+                <div class="container dashboard-home">
+                    <h2><i class="fas fa-chart-line"></i> Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h3>150+</h3>
+                            <p>Currencies</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Real-time</h3>
+                            <p>Live Rates</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-users"></i>
+                            <h3>10k+</h3>
+                            <p>Active Users</p>
+                        </div>
+                    </div>
+                    <div class="welcome-text">
+                        <p>Your ultimate destination for seamless, real-time currency exchange rates. We provide accurate financial data, allowing you to convert across dozens of global currencies instantly. Use our navigation menu to access our powerful calculator, learn about our recent projects, discover our mission, and get in touch!</p>
+                    </div>
+                    <div class="features-list">
+                        <h3><i class="fas fa-star"></i> Why Choose FinConvert?</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Bank-level security for all your conversions.</li>
+                            <li><i class="fas fa-check-circle"></i> Historical data tracking up to 10 years.</li>
+                            <li><i class="fas fa-check-circle"></i> Zero hidden fees or commissions.</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Premium customer support.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        <section id="calculator" class="section bg-light">
+            <div class="converter-card">
+                <h2 class="converter-title">Currency Converter</h2>
+                
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" value="1" min="0" step="0.01">
+                </div>
+
+                <div class="currency-selectors">
+                    <div class="input-group">
+                        <label for="from-currency">From</label>
+                        <select id="from-currency">
+                            <option value="USD" selected>USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                        </select>
+                    </div>
+
+                    <button id="swap-btn" class="swap-btn" aria-label="Swap currencies">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16"/></svg>
+                    </button>
+
+                    <div class="input-group">
+                        <label for="to-currency">To</label>
+                        <select id="to-currency">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR" selected>EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <p id="result-text" class="result-value">0.00</p>
+                    <p id="rate-info" class="rate-info"></p>
+                </div>
+
+                <button id="convert-btn" class="convert-btn">Convert</button>
+            </div>
+    </section>
+
+    <section id="work" class="section">
+        <div class="container">
+            <h2><i class="fas fa-history"></i> Recent Conversions</h2>
+            <p>Review your latest currency calculations and history.</p>
+            
+            <div class="work-grid" id="recent-conversions">
+                <p style="grid-column: 1 / -1; text-align: center; color: #5c4033;">No recent conversions yet. Click "Convert" in the calculator to save your history!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> About Us</h2>
+            <p class="section-subtitle">We are dedicated to providing the most accurate and real-time currency conversion tools available.</p>
+            
+            <div class="about-content">
+                <div class="mission-box">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>To break down financial borders by delivering transparent, lightning-fast, and highly secure currency exchange tools for everyone, everywhere. We believe in empowering our users with reliable real-time data to make smart financial decisions.</p>
+                </div>
+                
+                <h3 class="team-title"><i class="fas fa-users"></i> Meet Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="https://ui-avatars.com/api/?name=Pragathi+K+S&background=5c4033&color=fff&size=150" alt="Pragathi K S" class="team-img">
+                        <h4>Pragathi K S</h4>
+                        <p>Developer & Maker</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://ui-avatars.com/api/?name=Ruchitha+G&background=8a6c57&color=fff&size=150" alt="Ruchitha G" class="team-img">
+                        <h4>Ruchitha G</h4>
+                        <p>Developer & Maker</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://ui-avatars.com/api/?name=Prathibha+K+R&background=bfa893&color=fff&size=150" alt="Prathibha K R" class="team-img">
+                        <h4>Prathibha K R</h4>
+                        <p>Developer & Maker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 FinConvert. Leading the market <i class="fas fa-chess-king"></i></p>
+    </footer>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

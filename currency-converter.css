@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #fdfaf6;
+    color: #3a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.converter-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.converter-title {
+    text-align: center;
+    color: #3a2a2a;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label i {
+    margin-right: 6px;
+    color: #5c4033;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #5c4033;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+    padding: 12px 16px;
+    border: 1px solid #eaddcf;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #3a2a2a;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fdfaf6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #5c4033;
+    box-shadow: 0 0 0 4px rgba(92, 64, 51, 0.15);
+    background-color: #ffffff;
+}
+
+.currency-selectors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.currency-selectors .input-group {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.swap-btn {
+    background-color: #fdfaf6;
+    border: 1px solid #eaddcf;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 22px; /* Aligns visually with the input fields below labels */
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    color: #5c4033;
+}
+
+.swap-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.swap-btn:hover {
+    background-color: #f5efe6;
+    transform: rotate(180deg);
+    color: #3a2a2a;
+    border-color: #5c4033;
+}
+
+.result-box {
+    background-color: #fdfaf6;
+    border: 1px solid #eaddcf;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.result-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #3a2a2a;
+    word-break: break-word;
+}
+
+.convert-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #3a2a2a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.convert-btn:hover {
+    background-color: #5c4033;
+}
+
+.convert-btn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive layout to prevent overlapping */
+@media (max-width: 900px) {
+    .currency-selectors {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .swap-btn {
+        margin-top: 5px;
+        transform: rotate(90deg);
+    }
+    .swap-btn:hover {
+        transform: rotate(270deg);
+    }
+}
